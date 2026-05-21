@@ -1,4 +1,4 @@
-            __Data Structures & Algorithms__
+__Data Structures & Algorithms__
 
 Concepts to be covered : 
 1. Arrays & Strings
