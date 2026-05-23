@@ -26,8 +26,22 @@ class singly_linkedlist():
         print("Element Does not exist")
         return False
     
-    
+class Doubly_Linkedlist():
+    def __init__(self, val, prev=None, next=None):
+        self.prev = prev
+        self.val = val
+        self.next=next
 
+    def display_Linkedlists(self,head):
+        curr = head
+        elements=[]
+        while curr:
+            elements.append(str(curr.val))
+            curr = curr.next
+        print('<->'.join(elements))
+
+
+'''
 head = singly_linkedlist(3)
 a = singly_linkedlist(2)
 b = singly_linkedlist(5)
@@ -37,3 +51,15 @@ a.next = b
 
 head.display_linkedlist(head)
 head.checking(head, 5)
+'''
+
+'''
+head = Doubly_Linkedlist(3)
+a=Doubly_Linkedlist(2,head)
+b=Doubly_Linkedlist(5,a)
+head.next=a
+a.next = b
+head.display_Linkedlists(head)
+print(head==a.prev)
+'''
+
