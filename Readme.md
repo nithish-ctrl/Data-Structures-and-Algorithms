@@ -1,6 +1,6 @@
-#__Data Structures & Algorithms__
+__Data Structures & Algorithms__
 
-##Concepts to be covered : 
+Concepts to be covered : 
 1. Arrays & Strings
 2. Linked Lists
 3. Hash Tables
