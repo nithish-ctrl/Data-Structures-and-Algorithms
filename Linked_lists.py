@@ -24,6 +24,7 @@ class singly_linkedlist():
         print("Element Does not exist")
         return False
     
+    
 
 head = singly_linkedlist(3)
 a = singly_linkedlist(2)
