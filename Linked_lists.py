@@ -33,4 +33,4 @@ head.next = a
 a.next = b
 
 head.display_linkedlist(head)
-head.checking(head, 4)
+head.checking(head, 5)
