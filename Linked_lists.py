@@ -20,6 +20,8 @@ class singly_linkedlist():
             if curr.val == value : 
                 print("Element found")
                 return True
+            curr = curr.next
+        print("Element Does not exist")
         return False
     
 
