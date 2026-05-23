@@ -16,11 +16,13 @@ class singly_linkedlist():
 
     def checking(self, head, value):
         curr = head
+        count=1
         while curr:
             if curr.val == value : 
-                print("Element found")
+                print(f"Element found at position {count}")
                 return True
             curr = curr.next
+            count+=1
         print("Element Does not exist")
         return False
     
