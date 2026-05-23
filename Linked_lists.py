@@ -51,9 +51,9 @@ a.next = b
 
 head.display_linkedlist(head)
 head.checking(head, 5)
-'''
 
-'''
+
+
 head = Doubly_Linkedlist(3)
 a=Doubly_Linkedlist(2,head)
 b=Doubly_Linkedlist(5,a)
