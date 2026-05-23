@@ -17,9 +17,9 @@ class singly_linkedlist():
     def checking(self, head, value):
         curr = head
         while curr:
-            curr.val = value
-            print("Element found")
-            return True
+            if curr.val == value : 
+                print("Element found")
+                return True
         return False
     
 
@@ -31,3 +31,4 @@ head.next = a
 a.next = b
 
 head.display_linkedlist(head)
+head.checking(head, 4)
