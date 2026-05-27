@@ -37,6 +37,7 @@ class TreeNode:
             if node.left : q.append(node.left)
             if node.right : q.append(node.right)
 
+'''
 a = TreeNode(1)
 b = TreeNode(2)
 c = TreeNode(3)
@@ -61,3 +62,4 @@ print(f'\nPostorder Traversal')
 a.Postorder_traversal(a)
 print(f'\nLevelorder Traversal')
 a.Levelorder_traversal(a)
+'''
