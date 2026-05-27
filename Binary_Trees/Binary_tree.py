@@ -1,3 +1,4 @@
+from collections import deque
 
 class TreeNode:
     def __init__(self, val, left=None, right = None):
@@ -25,10 +26,16 @@ class TreeNode:
         self.Postorder_traversal(node.left)
         self.Preorder_traversal(node.right)
         print(node, end="")
-        
+
     
     def Levelorder_traversal(self, node):  #BFS
-        pass
+        q = deque()
+        q.append(node)
+        while q :
+            node = q.popleft()
+            print(node, end="")
+            if node.left : q.append(node.left)
+            if node.right : q.append(node.right)
 
 a = TreeNode(1)
 b = TreeNode(2)
@@ -52,3 +59,5 @@ print(f'\nInorder Traversal')
 a.Inorder_traversal(a)
 print(f'\nPostorder Traversal')
 a.Postorder_traversal(a)
+print(f'\nLevelorder Traversal')
+a.Levelorder_traversal(a)
