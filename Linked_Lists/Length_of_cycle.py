@@ -6,16 +6,20 @@ def Length_of_loop(head):
     count = 0
     counter = 0
     while fast and fast.next :
-        if slow == fast :
-            meeting_point = slow
-            count+=1
-            if count == 2:
-                return counter
         slow = slow.next
         fast = fast.next.next
-        if count == 1 :
-            counter+=1
+        if slow == fast :
+            length = calculate_length(slow)
+            return length
     return False
+
+def calculate_length(meeting_point):
+    temp = meeting_point
+    length = 1
+    while temp.next != meeting_point:
+        temp = temp.next
+        length+=1
+    return length
 
 
 head = singly_linkedlist(1)
@@ -30,7 +34,7 @@ a.next = b
 b.next = c
 c.next = d
 d.next = e
-e.next = d
+e.next = c
 
 print(Length_of_loop(head))
 
