@@ -3,21 +3,19 @@ from Linked_lists import singly_linkedlist
 def intersection_of_LL(head1,head2):
     cur1 = head1
     cur2 = head2
-    while cur1 is not None and cur2 is not None :
-        cur1 = cur1.next
-        cur2 = cur2.next
-        if cur1.next == None :
-            cur1.next = head2
-            break
-        elif cur2.next == None :
-            cur2.next = head1
-            break
+    while cur1 != cur2 :
+        cur1 = head2 if cur1 is None else cur1.next
+        cur2 = head1 if cur2 is None else cur2.next
+    
+        return cur1.val
+    '''
     while cur1 and cur2:
         if cur1 == cur2 :
             return cur1.val
         cur1 = cur1.next
         cur2 = cur2.next.next
     return False
+    '''
 
 
 head1 = singly_linkedlist(1)
@@ -34,7 +32,7 @@ h = singly_linkedlist(9)
 head1.next = a
 a.next = b
 b.next = c
-c.next = head2
+c.next = e
 head2.next = e
 e.next = f
 f.next = g
