@@ -1,5 +1,7 @@
-# The issue is the sorting makes the pair match wrong - have to put a single tuple into a list and then 
+# The issue is the sorting makes the pair match wrong - have to add a single tuple into a list and then 
 # descending sort acc to value only , this retains the value-weight pair
+
+
 def Knacksack_problem(values, weights, capacity):
     paired_list = [(value,weight) for value,weight in zip(values,weights)]
     paired_list.sort(reverse=True)
@@ -16,8 +18,10 @@ def Knacksack_problem(values, weights, capacity):
             iter+=1
     return total_value
 
+'''
 val = [60, 100, 120]
 wt = [10, 20, 30]
 capacity = 50
 
 print(Knacksack_problem(val,wt,capacity))
+'''
