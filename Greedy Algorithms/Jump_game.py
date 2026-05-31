@@ -1,8 +1,6 @@
 
 def jump_game(arr):
     target_index = len(arr)-1
-    curr_index = 0
-    max_index = 0
     for i,idx in enumerate(arr):
         if i + idx > target_index and i == len(arr)-1:
             return False
