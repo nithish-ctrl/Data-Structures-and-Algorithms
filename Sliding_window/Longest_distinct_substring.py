@@ -5,12 +5,14 @@ def Longest_distinct_substring(input_string):
     length = len(input_string)
     sett = []
     for r in range(length):
-        while input_string[r] in sett : 
-            left+=1
-            break
-        w = (r-left)+1
-        longest = max(longest,w)
-        sett.append(input_string[r])
+        if input_string[r] not in sett:
+            sett.append(input_string[r])
+            longest = max(longest, r-left+1)
+        else : 
+            while input_string[r] in sett:
+                sett.remove(input_string[left])
+                left+=1
+            sett.append(input_string[r])
     return longest
 
 input_str = "abcdeaa"
