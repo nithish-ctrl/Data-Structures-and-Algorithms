@@ -1,4 +1,4 @@
-
+# Shortest Job First 
 def Shortest_job_first(array):
     array.sort()
     waiting_time = 0
